@@ -56,6 +56,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Geometry\Primitives\Shapes.cs" />
+    <Compile Include="Geometry\Primitives\Vectors.cs" />
     <Compile Include="Redmine\ExtensionMethods.cs" />
     <Compile Include="Redmine\IRedmineManager.cs" />
     <Compile Include="Redmine\Priorities.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Utility\Csv.cs" />
     <Compile Include="Utility\Debugging.cs" />
     <Compile Include="Utility\Format.cs" />
+    <Compile Include="Utility\GenericOperator.cs" />
     <Compile Include="Utility\Serialization.cs" />
     <Compile Include="Utility\Time.cs" />
     <Compile Include="WriteableBitmapEx\NativeMethods.cs" />
@@ -109,7 +112,6 @@
     <Compile Include="Geometry\Fill.cs" />
     <Compile Include="Geometry\Shape.cs" />
     <Compile Include="Geometry\Spline.cs" />
-    <Compile Include="Geometry\Vectors.cs" />
     <Compile Include="Infrastructure\Collections\BindingObservableCollection.cs" />
     <Compile Include="Infrastructure\Collections\HashTable.cs" />
     <Compile Include="Infrastructure\Collections\SafeObservableCollection.cs" />
