@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Collections.Generic;
+using BCCL.Geometry.Primitives;
 
 namespace BCCL.Geometry
 {

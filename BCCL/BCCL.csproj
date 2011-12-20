@@ -94,6 +94,9 @@
     <Compile Include="UI\Xaml\Enum\EnumItemTypeConverter.cs" />
     <Compile Include="UI\Xaml\Enum\ImageSourceHelpers.cs" />
     <Compile Include="UI\Xaml\HslColorExtension.cs" />
+    <Compile Include="UI\Xaml\MeasurableCanvas.cs" />
+    <Compile Include="UI\Xaml\ScrollViewerThumbnail.cs" />
+    <Compile Include="UI\Xaml\ToggleButtonDataBound.cs" />
     <Compile Include="UI\Xaml\Utility\DependencyHelpers.cs" />
     <Compile Include="Utility\Calc.cs" />
     <Compile Include="Utility\Csv.cs" />
@@ -179,6 +182,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="WriteableBitmapEx\License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\Xaml\ScrollViewerThumbnail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>ScrollViewerThumbnail.cs</DependentUpon>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
