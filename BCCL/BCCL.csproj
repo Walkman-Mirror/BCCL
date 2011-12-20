@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D233DE2-586B-49F1-8E83-86399078EAE6}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BCCL</RootNamespace>
+    <AssemblyName>BCCL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\LIB\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Redmine\ExtensionMethods.cs" />
+    <Compile Include="Redmine\IRedmineManager.cs" />
+    <Compile Include="Redmine\Priorities.cs" />
+    <Compile Include="Redmine\RedmineManager.cs" />
+    <Compile Include="Redmine\RestAPI.cs" />
+    <Compile Include="Redmine\Trackers.cs" />
+    <Compile Include="Redmine\Types\Attachment.cs" />
+    <Compile Include="Redmine\Types\CustomField.cs" />
+    <Compile Include="Redmine\Types\Identifiable.cs" />
+    <Compile Include="Redmine\Types\IdentifiableName.cs" />
+    <Compile Include="Redmine\Types\Issue.cs" />
+    <Compile Include="Redmine\Types\IssueRelation.cs" />
+    <Compile Include="Redmine\Types\Membership.cs" />
+    <Compile Include="Redmine\Types\News.cs" />
+    <Compile Include="Redmine\Types\Project.cs" />
+    <Compile Include="Redmine\Types\Query.cs" />
+    <Compile Include="Redmine\Types\Role.cs" />
+    <Compile Include="Redmine\Types\TimeEntry.cs" />
+    <Compile Include="Redmine\Types\Tracker.cs" />
+    <Compile Include="Redmine\Types\User.cs" />
+    <Compile Include="Redmine\Types\Version.cs" />
+    <Compile Include="Sql\ISqlService.cs" />
+    <Compile Include="Sql\MsSqlService.cs" />
+    <None Include="Sql\OracleService.cs" />
+    <Compile Include="Sql\SqlLiteService.cs" />
+    <Compile Include="Sql\SqlServiceBase.cs" />
+    <Compile Include="Sql\TnsNamesParser.cs" />
+    <Compile Include="UI\Xaml\AutoGrid.cs" />
+    <Compile Include="UI\Xaml\Dialog\DialogEnum.cs" />
+    <Compile Include="UI\Xaml\Dialog\IDialogService.cs" />
+    <Compile Include="UI\Xaml\ElementSpy.cs" />
+    <Compile Include="UI\Xaml\Enum\EnumItem.cs" />
+    <Compile Include="UI\Xaml\Enum\EnumItemList.cs" />
+    <Compile Include="UI\Xaml\Enum\EnumItemTypeConverter.cs" />
+    <Compile Include="UI\Xaml\Enum\ImageSourceHelpers.cs" />
+    <Compile Include="UI\Xaml\HslColorExtension.cs" />
+    <Compile Include="UI\Xaml\Utility\DependencyHelpers.cs" />
+    <Compile Include="Utility\Calc.cs" />
+    <Compile Include="Utility\Csv.cs" />
+    <Compile Include="Utility\Debugging.cs" />
+    <Compile Include="Utility\Format.cs" />
+    <Compile Include="Utility\Serialization.cs" />
+    <Compile Include="Utility\Time.cs" />
+    <Compile Include="WriteableBitmapEx\NativeMethods.cs" />
+    <Compile Include="WriteableBitmapEx\WriteableBitmapBaseExtensions.cs" />
+    <Compile Include="WriteableBitmapEx\WriteableBitmapFillExtensions.cs" />
+    <Compile Include="WriteableBitmapEx\WriteableBitmapShapeExtensions.cs" />
+    <Compile Include="WriteableBitmapEx\WriteableBitmapSplineExtensions.cs" />
+    <Compile Include="WriteableBitmapEx\WriteableBitmapTransformationExtensions.cs" />
+    <None Include="Excel\ExcelFromDataSet.cs" />
+    <Compile Include="Geometry\Fill.cs" />
+    <Compile Include="Geometry\Shape.cs" />
+    <Compile Include="Geometry\Spline.cs" />
+    <Compile Include="Geometry\Vectors.cs" />
+    <Compile Include="Infrastructure\Collections\BindingObservableCollection.cs" />
+    <Compile Include="Infrastructure\Collections\HashTable.cs" />
+    <Compile Include="Infrastructure\Collections\SafeObservableCollection.cs" />
+    <Compile Include="Infrastructure\Events\EventArgExtensions.cs" />
+    <Compile Include="Infrastructure\Events\EventArgs.cs" />
+    <Compile Include="Infrastructure\Threading\OneManyLock.cs" />
+    <Compile Include="IssueTracker\IssueManager.cs" />
+    <Compile Include="IssueTracker\Types\Issue.cs" />
+    <Compile Include="IssueTracker\Types\IssueType.cs" />
+    <Compile Include="IssueTracker\Types\Priority.cs" />
+    <Compile Include="IssueTracker\Types\Project.cs" />
+    <Compile Include="IssueTracker\Types\Status.cs" />
+    <Compile Include="IssueTracker\Types\User.cs" />
+    <Compile Include="Logging\ILogService.cs" />
+    <Compile Include="Logging\MemoryLogger.cs" />
+    <Compile Include="Logging\MessageLevel.cs" />
+    <Compile Include="Logging\RedmineLogger.cs" />
+    <Compile Include="Logging\TextLogger.cs" />
+    <Compile Include="MvvmLight\Command\RelayCommand.cs" />
+    <Compile Include="MvvmLight\Command\RelayCommandGeneric.cs" />
+    <Compile Include="MvvmLight\Helpers\IExecuteWithObject.cs" />
+    <Compile Include="MvvmLight\Helpers\WeakAction.cs" />
+    <Compile Include="MvvmLight\Helpers\WeakActionGeneric.cs" />
+    <Compile Include="MvvmLight\ICleanup.cs" />
+    <Compile Include="MvvmLight\Messaging\DialogMessage.cs" />
+    <Compile Include="MvvmLight\Messaging\GenericMessage.cs" />
+    <Compile Include="MvvmLight\Messaging\IMessenger.cs" />
+    <Compile Include="MvvmLight\Messaging\MessageBase.cs" />
+    <Compile Include="MvvmLight\Messaging\Messenger.cs" />
+    <Compile Include="MvvmLight\Messaging\NotificationMessage.cs" />
+    <Compile Include="MvvmLight\Messaging\NotificationMessageAction.cs" />
+    <Compile Include="MvvmLight\Messaging\NotificationMessageActionGeneric.cs" />
+    <Compile Include="MvvmLight\Messaging\NotificationMessageGeneric.cs" />
+    <Compile Include="MvvmLight\Messaging\NotificationMessageWithCallback.cs" />
+    <Compile Include="MvvmLight\Messaging\PropertyChangedMessage.cs" />
+    <Compile Include="MvvmLight\Messaging\PropertyChangedMessageBase.cs" />
+    <Compile Include="MvvmLight\ObservableObject.cs" />
+    <Compile Include="MvvmLight\Threading\DispatcherHelper.cs" />
+    <Compile Include="MvvmLight\ViewModelBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Forms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WriteableBitmapEx\License.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
