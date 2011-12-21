@@ -1,6 +1,6 @@
 BCCL - BinaryConstruct Combined Library
 
-This is a combined source library intended for use in BinaryConstruct's projects. 
+This is a combined source library intended for use in BinaryConstruct's Open Source projects. 
 
 It includes source code from multiple locataions and licenses. 
 Each copyrighted source file or directory includes a copy of the 
