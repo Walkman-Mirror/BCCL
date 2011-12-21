@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -102,6 +103,12 @@
     <Compile Include="Sql\SqlLiteService.cs" />
     <Compile Include="Sql\SqlServiceBase.cs" />
     <Compile Include="Sql\TnsNamesParser.cs" />
+    <Compile Include="UI\WinForms\SearchTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\WinForms\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Xaml\AutoGrid.cs" />
     <Compile Include="UI\Xaml\Dialog\DialogEnum.cs" />
     <Compile Include="UI\Xaml\Dialog\IDialogService.cs" />
@@ -178,9 +185,7 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Forms\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="UI\Xaml\ScrollViewerThumbnail.xaml">
       <SubType>Designer</SubType>
