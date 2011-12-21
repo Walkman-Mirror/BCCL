@@ -10,6 +10,7 @@ namespace BCCL.Framework.Collections
     /// <summary>
     /// A fast observable collection with binding notification suspension
     /// http://stackoverflow.com/questions/7687000/fast-performing-and-thread-safe-observable-collection
+    /// licensed under http://creativecommons.org/licenses/by-sa/3.0/
     /// </summary>
     /// <typeparam name="T"></typeparam>
     [DebuggerDisplay("Count = {Count}")]

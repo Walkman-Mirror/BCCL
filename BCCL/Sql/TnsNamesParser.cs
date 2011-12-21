@@ -1,3 +1,10 @@
+// Author: ciro_vladimir
+// TNSNames Reader
+// http://www.codeproject.com/KB/database/TNSNames_Reader.aspx
+// License: The Code Project Open License (CPOL)
+// http://www.codeproject.com/info/cpol10.aspx
+
+
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;

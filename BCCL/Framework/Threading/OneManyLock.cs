@@ -1,3 +1,5 @@
+// Copyright (c) 2011 Jeffrey Richter
+
 using System;
 using System.Diagnostics;
 using System.Globalization;

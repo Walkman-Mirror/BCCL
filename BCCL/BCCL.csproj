@@ -56,6 +56,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Framework\Events\WeakEventHandler.cs" />
     <Compile Include="Graphics\Geometry\Fill.cs" />
     <Compile Include="Graphics\Geometry\Primitives\Shapes.cs" />
     <Compile Include="Graphics\Geometry\Primitives\Vectors.cs" />
@@ -121,7 +122,7 @@
     <Compile Include="Utility\GenericOperator.cs" />
     <Compile Include="Utility\Serialization.cs" />
     <Compile Include="Utility\Time.cs" />
-    <None Include="Excel\ExcelFromDataSet.cs" />
+    <None Include="Office\ExcelFromDataSet.cs" />
     <Compile Include="Framework\Collections\BindingObservableCollection.cs" />
     <Compile Include="Framework\Collections\HashTable.cs" />
     <Compile Include="Framework\Collections\SafeObservableCollection.cs" />
