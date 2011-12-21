@@ -14,7 +14,7 @@ documentation and additional licenses.
 If you wish to include the code in your projects please include the appripriate licenses.
 
 Any additional code written by BinaryConstruct in the library falls under the MS-PL license that follows:
-
+Copyright (c) 2011 BinaryConstruct
 Microsoft Public License (MS-PL)
 
 This license governs use of the accompanying software. If you use the software, you
