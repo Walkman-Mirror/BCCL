@@ -1,7 +1,7 @@
 using System;
 using System.Collections.ObjectModel;
-using BCCL.Redmine;
-using BCCL.Redmine.Types;
+using BCCL.IssueTracking.Redmine;
+using BCCL.IssueTracking.Redmine.Types;
 
 namespace BCCL.Logging
 {

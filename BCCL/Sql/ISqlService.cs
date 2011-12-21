@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using BCCL.Infrastructure.Events;
+using BCCL.Framework.Events;
 
 namespace BCCL.Sql
 {

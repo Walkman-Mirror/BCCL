@@ -56,29 +56,45 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Geometry\Primitives\Shapes.cs" />
-    <Compile Include="Geometry\Primitives\Vectors.cs" />
-    <Compile Include="Redmine\ExtensionMethods.cs" />
-    <Compile Include="Redmine\IRedmineManager.cs" />
-    <Compile Include="Redmine\Priorities.cs" />
-    <Compile Include="Redmine\RedmineManager.cs" />
-    <Compile Include="Redmine\RestAPI.cs" />
-    <Compile Include="Redmine\Trackers.cs" />
-    <Compile Include="Redmine\Types\Attachment.cs" />
-    <Compile Include="Redmine\Types\CustomField.cs" />
-    <Compile Include="Redmine\Types\Identifiable.cs" />
-    <Compile Include="Redmine\Types\IdentifiableName.cs" />
-    <Compile Include="Redmine\Types\Issue.cs" />
-    <Compile Include="Redmine\Types\IssueRelation.cs" />
-    <Compile Include="Redmine\Types\Membership.cs" />
-    <Compile Include="Redmine\Types\News.cs" />
-    <Compile Include="Redmine\Types\Project.cs" />
-    <Compile Include="Redmine\Types\Query.cs" />
-    <Compile Include="Redmine\Types\Role.cs" />
-    <Compile Include="Redmine\Types\TimeEntry.cs" />
-    <Compile Include="Redmine\Types\Tracker.cs" />
-    <Compile Include="Redmine\Types\User.cs" />
-    <Compile Include="Redmine\Types\Version.cs" />
+    <Compile Include="Graphics\Geometry\Fill.cs" />
+    <Compile Include="Graphics\Geometry\Primitives\Shapes.cs" />
+    <Compile Include="Graphics\Geometry\Primitives\Vectors.cs" />
+    <Compile Include="Graphics\Geometry\Shape.cs" />
+    <Compile Include="Graphics\Geometry\Spline.cs" />
+    <Compile Include="Graphics\WriteableBitmapWpf\NativeMethods.cs" />
+    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapBaseExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapFillExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapShapeExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapSplineExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapTransformationExtensions.cs" />
+    <Compile Include="IssueTracking\IssueTracker\IssueManager.cs" />
+    <Compile Include="IssueTracking\IssueTracker\Types\Issue.cs" />
+    <Compile Include="IssueTracking\IssueTracker\Types\IssueType.cs" />
+    <Compile Include="IssueTracking\IssueTracker\Types\Priority.cs" />
+    <Compile Include="IssueTracking\IssueTracker\Types\Project.cs" />
+    <Compile Include="IssueTracking\IssueTracker\Types\Status.cs" />
+    <Compile Include="IssueTracking\IssueTracker\Types\User.cs" />
+    <Compile Include="IssueTracking\Redmine\ExtensionMethods.cs" />
+    <Compile Include="IssueTracking\Redmine\IRedmineManager.cs" />
+    <Compile Include="IssueTracking\Redmine\Priorities.cs" />
+    <Compile Include="IssueTracking\Redmine\RedmineManager.cs" />
+    <Compile Include="IssueTracking\Redmine\RestAPI.cs" />
+    <Compile Include="IssueTracking\Redmine\Trackers.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Attachment.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\CustomField.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Identifiable.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\IdentifiableName.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Issue.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\IssueRelation.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Membership.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\News.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Project.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Query.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Role.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\TimeEntry.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Tracker.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\User.cs" />
+    <Compile Include="IssueTracking\Redmine\Types\Version.cs" />
     <Compile Include="Sql\ISqlService.cs" />
     <Compile Include="Sql\MsSqlService.cs" />
     <None Include="Sql\OracleService.cs" />
@@ -105,29 +121,13 @@
     <Compile Include="Utility\GenericOperator.cs" />
     <Compile Include="Utility\Serialization.cs" />
     <Compile Include="Utility\Time.cs" />
-    <Compile Include="WriteableBitmapEx\NativeMethods.cs" />
-    <Compile Include="WriteableBitmapEx\WriteableBitmapBaseExtensions.cs" />
-    <Compile Include="WriteableBitmapEx\WriteableBitmapFillExtensions.cs" />
-    <Compile Include="WriteableBitmapEx\WriteableBitmapShapeExtensions.cs" />
-    <Compile Include="WriteableBitmapEx\WriteableBitmapSplineExtensions.cs" />
-    <Compile Include="WriteableBitmapEx\WriteableBitmapTransformationExtensions.cs" />
     <None Include="Excel\ExcelFromDataSet.cs" />
-    <Compile Include="Geometry\Fill.cs" />
-    <Compile Include="Geometry\Shape.cs" />
-    <Compile Include="Geometry\Spline.cs" />
-    <Compile Include="Infrastructure\Collections\BindingObservableCollection.cs" />
-    <Compile Include="Infrastructure\Collections\HashTable.cs" />
-    <Compile Include="Infrastructure\Collections\SafeObservableCollection.cs" />
-    <Compile Include="Infrastructure\Events\EventArgExtensions.cs" />
-    <Compile Include="Infrastructure\Events\EventArgs.cs" />
-    <Compile Include="Infrastructure\Threading\OneManyLock.cs" />
-    <Compile Include="IssueTracker\IssueManager.cs" />
-    <Compile Include="IssueTracker\Types\Issue.cs" />
-    <Compile Include="IssueTracker\Types\IssueType.cs" />
-    <Compile Include="IssueTracker\Types\Priority.cs" />
-    <Compile Include="IssueTracker\Types\Project.cs" />
-    <Compile Include="IssueTracker\Types\Status.cs" />
-    <Compile Include="IssueTracker\Types\User.cs" />
+    <Compile Include="Framework\Collections\BindingObservableCollection.cs" />
+    <Compile Include="Framework\Collections\HashTable.cs" />
+    <Compile Include="Framework\Collections\SafeObservableCollection.cs" />
+    <Compile Include="Framework\Events\EventArgExtensions.cs" />
+    <Compile Include="Framework\Events\EventArgs.cs" />
+    <Compile Include="Framework\Threading\OneManyLock.cs" />
     <Compile Include="Logging\ILogService.cs" />
     <Compile Include="Logging\MemoryLogger.cs" />
     <Compile Include="Logging\MessageLevel.cs" />
@@ -181,14 +181,14 @@
     <Folder Include="UI\Forms\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="WriteableBitmapEx\License.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="UI\Xaml\ScrollViewerThumbnail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>ScrollViewerThumbnail.cs</DependentUpon>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\WriteableBitmapWpf\License.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
