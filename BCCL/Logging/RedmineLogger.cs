@@ -1,3 +1,15 @@
+/* 
+Copyright (c) 2011 BinaryConstruct
+ 
+This source is subject to the Microsoft Public License.
+See http://www.microsoft.com/opensource/licenses.mspx#Ms-PL.
+All other rights reserved.
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
 using System;
 using System.Collections.ObjectModel;
 using BCCL.IssueTracking.Redmine;
@@ -15,9 +27,6 @@ namespace BCCL.Logging
         private readonly string _project;
         public RedmineLogger(string project, string server, string apikey)
         {
-            //@"http://192.168.111.128/redmine", "1a2e1d9c9693d535c261d62d932c5a97601bba94");
-            // operator console API key: 781716fe77e4f3a75803155aee93c55b6c5096ba
-            // automated issue API Key:  1a2e1d9c9693d535c261d62d932c5a97601bba94
             _project = project;
             _redmine = new RedmineManager(server, apikey); 
         }

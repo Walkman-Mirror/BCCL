@@ -1,5 +1,5 @@
-// Written by John Smith
-// http://joshsmithonwpf.wordpress.com/2008/07/22/enable-elementname-bindings-with-elementspy/
+// Author: John Smith
+// source: http://joshsmithonwpf.wordpress.com/2008/07/22/enable-elementname-bindings-with-elementspy/
 
 using System;
 using System.Reflection;

@@ -1,6 +1,11 @@
 ﻿// This is a modified verion of the AutoGrid from WPF Contrib on codeproject
 // http://wpfcontrib.codeplex.com/
 // Licensed under Microsoft Permissive License (Ms-PL) v1.1
+// See http://www.microsoft.com/opensource/licenses.mspx#Ms-PL.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+// EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED 
+// WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
 
 using System.Windows;
 using System.Windows.Controls;
