@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace BCCL.WriteableBitmapEx
+namespace BCCL.WriteableBitmapWpf
 {
     public static class NativeMethods
     {

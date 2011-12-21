@@ -24,7 +24,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace BCCL.WriteableBitmapEx
+namespace BCCL.WriteableBitmapWpf
 {
     /// <summary>
     /// Collection of draw extension methods for the Silverlight WriteableBitmap class.
