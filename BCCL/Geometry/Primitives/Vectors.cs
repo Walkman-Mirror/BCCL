@@ -12,7 +12,7 @@ WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 
 using System;
 
-namespace BCCL.Graphics.Geometry.Primitives
+namespace BCCL.Geometry.Primitives
 {
     #region Generics
     [Serializable]

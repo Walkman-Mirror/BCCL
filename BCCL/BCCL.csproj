@@ -58,17 +58,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\Events\WeakEventHandler.cs" />
-    <Compile Include="Graphics\Geometry\Fill.cs" />
-    <Compile Include="Graphics\Geometry\Primitives\Shapes.cs" />
-    <Compile Include="Graphics\Geometry\Primitives\Vectors.cs" />
-    <Compile Include="Graphics\Geometry\Shape.cs" />
-    <Compile Include="Graphics\Geometry\Spline.cs" />
-    <Compile Include="Graphics\WriteableBitmapWpf\NativeMethods.cs" />
-    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapBaseExtensions.cs" />
-    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapFillExtensions.cs" />
-    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapShapeExtensions.cs" />
-    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapSplineExtensions.cs" />
-    <Compile Include="Graphics\WriteableBitmapWpf\WriteableBitmapTransformationExtensions.cs" />
+    <Compile Include="WriteableBitmapWpf\NativeMethods.cs" />
+    <Compile Include="WriteableBitmapWpf\WriteableBitmapBaseExtensions.cs" />
+    <Compile Include="WriteableBitmapWpf\WriteableBitmapFillExtensions.cs" />
+    <Compile Include="WriteableBitmapWpf\WriteableBitmapShapeExtensions.cs" />
+    <Compile Include="WriteableBitmapWpf\WriteableBitmapSplineExtensions.cs" />
+    <Compile Include="WriteableBitmapWpf\WriteableBitmapTransformationExtensions.cs" />
+    <Compile Include="Geometry\Fill.cs" />
+    <Compile Include="Geometry\Primitives\Shapes.cs" />
+    <Compile Include="Geometry\Primitives\Vectors.cs" />
+    <Compile Include="Geometry\Shape.cs" />
+    <Compile Include="Geometry\Spline.cs" />
     <Compile Include="IssueTracking\IssueTracker\IssueManager.cs" />
     <Compile Include="IssueTracking\IssueTracker\Types\Issue.cs" />
     <Compile Include="IssueTracking\IssueTracker\Types\IssueType.cs" />
@@ -194,12 +194,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Graphics\WriteableBitmapWpf\License.txt" />
+    <Resource Include="WriteableBitmapWpf\License.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_StartDate="2001/1/1" />
+      <UserProperties BuildVersion_StartDate="2001/1/1" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

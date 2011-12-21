@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using BCCL.Graphics.Geometry.Primitives;
+using BCCL.Geometry.Primitives;
 
-namespace BCCL.Graphics.Geometry
+namespace BCCL.Geometry
 {
     public static class Spline
     {

@@ -138,13 +138,13 @@ namespace BCCL.UI.Xaml.Enum
                         textBlock.Text = text;
                         return textBlock;
                     }
-                    
+
                 }
                 throw new InvalidOperationException("Unable to convert item value to destination type.");
             }
             return null;
         }
 
-        
+
     }
 }

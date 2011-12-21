@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace BCCL.Graphics.WriteableBitmapWpf
+namespace System.Windows.Media.Imaging
 {
     public static class NativeMethods
     {

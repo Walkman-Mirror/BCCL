@@ -22,7 +22,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace BCCL.Graphics.WriteableBitmapWpf
+namespace System.Windows.Media.Imaging
 {
     /// <summary>
     /// Collection of transformation extension methods for the Silverlight WriteableBitmap class.

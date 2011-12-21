@@ -13,7 +13,7 @@ WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using BCCL.Utility;
 
-namespace BCCL.Graphics.Geometry.Primitives
+namespace BCCL.Geometry.Primitives
 {
     [Serializable]
     public class Rectangle<T> where T : struct

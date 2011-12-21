@@ -187,11 +187,11 @@ namespace BCCL.UI.WinForms
             g.Clear(Color.Transparent);
             switch (this.CheckState)
             {
-                case WinForms.CheckState.Checked:
+                case CheckState.Checked:
                     g.FillRectangle(new LinearGradientBrush(drawArea, SystemColors.ButtonHighlight, _ColorChecked, 90), drawArea);
 
                     break;
-                case WinForms.CheckState.Indeterminate:
+                case CheckState.Indeterminate:
                     g.FillRectangle(new LinearGradientBrush(drawArea, SystemColors.ButtonHighlight, _ColorIntermediate, 90), drawArea);
                     break;
                 default:
@@ -215,17 +215,17 @@ namespace BCCL.UI.WinForms
             {
                 switch (_CheckState)
                 {
-                    case WinForms.CheckState.Unchecked:
-                        this.CheckState = WinForms.CheckState.Checked;
+                    case CheckState.Unchecked:
+                        this.CheckState = CheckState.Checked;
                         break;
-                    case WinForms.CheckState.Checked:
-                        this.CheckState = WinForms.CheckState.Indeterminate;
+                    case CheckState.Checked:
+                        this.CheckState = CheckState.Indeterminate;
                         break;
-                    case WinForms.CheckState.Indeterminate:
-                        this.CheckState = WinForms.CheckState.Unchecked;
+                    case CheckState.Indeterminate:
+                        this.CheckState = CheckState.Unchecked;
                         break;
                     default:
-                        this.CheckState = WinForms.CheckState.Unchecked;
+                        this.CheckState = CheckState.Unchecked;
                         break;
                 }
             }
@@ -233,14 +233,14 @@ namespace BCCL.UI.WinForms
             {
                 switch (_CheckState)
                 {
-                    case WinForms.CheckState.Unchecked:
-                        this.CheckState = WinForms.CheckState.Checked;
+                    case CheckState.Unchecked:
+                        this.CheckState = CheckState.Checked;
                         break;
-                    case WinForms.CheckState.Checked:
-                        this.CheckState = WinForms.CheckState.Unchecked;
+                    case CheckState.Checked:
+                        this.CheckState = CheckState.Unchecked;
                         break;
                     default:
-                        this.CheckState = WinForms.CheckState.Unchecked;
+                        this.CheckState = CheckState.Unchecked;
                         break;
                 }
             }
