@@ -31,6 +31,9 @@ namespace BCCL.UI.Xaml.XnaContentHost
         // The HWND we present to when rendering
         private IntPtr hWnd;
 
+        // For holding previous hWnd focus
+        private IntPtr hWndprev;
+
         // The GraphicsDeviceService that provides and manages our GraphicsDevice
         private GraphicsDeviceService graphicsService;
         public GraphicsDeviceService GraphicsService
@@ -161,6 +164,11 @@ namespace BCCL.UI.Xaml.XnaContentHost
         /// Invoked when the control gets a mouse leave message.
         /// </summary>
         public event EventHandler<HwndMouseEventArgs> HwndMouseLeave;
+
+        /// <summary>
+        /// Invoked when the control recieves a mouse wheel delta.
+        /// </summary>
+        public event EventHandler<HwndMouseEventArgs> HwndMouseWheel;
 
         #endregion
 
@@ -410,8 +418,17 @@ namespace BCCL.UI.Xaml.XnaContentHost
 
         protected override IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
+            System.Diagnostics.Debug.WriteLine(msg);
             switch (msg)
             {
+                case NativeMethods.WM_MOUSEWHEEL:
+                    if (mouseInWindow)
+                    {
+                        int delta = wParam.ToInt32();
+                        if (HwndMouseWheel != null)
+                            HwndMouseWheel(this, new HwndMouseEventArgs(mouseState, delta, 0));
+                    }
+                    break;
                 case NativeMethods.WM_LBUTTONDOWN:
                     mouseState.LeftButton = MouseButtonState.Pressed;
                     if (HwndLButtonDown != null)
@@ -515,7 +532,8 @@ namespace BCCL.UI.Xaml.XnaContentHost
 
                         if (HwndMouseEnter != null)
                             HwndMouseEnter(this, new HwndMouseEventArgs(mouseState));
-
+                        hWndprev = NativeMethods.GetFocus();
+                        NativeMethods.SetFocus(hWnd);
                         // send the track mouse event so that we get the WM_MOUSELEAVE message
                         NativeMethods.TRACKMOUSEEVENT tme = new NativeMethods.TRACKMOUSEEVENT();
                         tme.cbSize = Marshal.SizeOf(typeof(NativeMethods.TRACKMOUSEEVENT));
@@ -545,6 +563,8 @@ namespace BCCL.UI.Xaml.XnaContentHost
 
                     if (HwndMouseLeave != null)
                         HwndMouseLeave(this, new HwndMouseEventArgs(mouseState));
+
+                    NativeMethods.SetFocus(hWndprev);
                     break;
                 default:
                     break;
