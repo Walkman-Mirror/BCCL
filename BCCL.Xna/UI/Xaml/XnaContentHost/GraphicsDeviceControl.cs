@@ -418,7 +418,6 @@ namespace BCCL.UI.Xaml.XnaContentHost
 
         protected override IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
-            System.Diagnostics.Debug.WriteLine(msg);
             switch (msg)
             {
                 case NativeMethods.WM_MOUSEWHEEL:

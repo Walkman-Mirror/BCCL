@@ -11,10 +11,12 @@ namespace BCCL.UI.Xaml.XnaContentHost.Primitives2D
         private int Frame;
         private float TotalElapsed;
         private bool Paused;
+        private int _startFrame;
+        private int _endFrame;
 
         public float Rotation, Scale, Depth;
         public Vector2 Origin;
-        public AnimatedTexture(Texture2D texture, Vector2 Origin, float Rotation, float Scale, float Depth, int FrameCount, float fps)
+        public AnimatedTexture(Texture2D texture, Vector2 Origin, float Rotation, float Scale, float Depth, int FrameCount, float fps, int startFrame, int endFrame)
         {
             this.Origin = Origin;
             this.Rotation = Rotation;
@@ -27,7 +29,18 @@ namespace BCCL.UI.Xaml.XnaContentHost.Primitives2D
             TimePerFrame = (float)1 / fps;
             Frame = 0;
             TotalElapsed = 0;
+            _startFrame = startFrame;
+            _endFrame = endFrame;
             Paused = false;
+        }
+
+        public void SetAnimation(float fps, int startFrame, int endFrame)
+        {
+            TimePerFrame = (float)1 / fps;
+            Frame = 0;
+            TotalElapsed = 0;
+            _startFrame = startFrame;
+            _endFrame = endFrame;
         }
 
         // class AnimatedTexture
@@ -41,7 +54,11 @@ namespace BCCL.UI.Xaml.XnaContentHost.Primitives2D
                 Frame++;
                 // Keep the Frame between 0 and the total frames, minus one.
                 Frame = Frame % framecount;
-                if (Frame == 0) Frame+=2;
+
+                // Keep the frame between start and end frames;
+                if (Frame > _endFrame) Frame = 0;
+                if (Frame < _startFrame) Frame = _startFrame;
+
                 TotalElapsed -= TimePerFrame;
             }
         }
