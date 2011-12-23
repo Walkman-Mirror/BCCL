@@ -289,8 +289,17 @@ namespace BCCL.UI.Xaml.XnaContentHost
             if (RenderXna != null)
                 RenderXna(this, new GraphicsDeviceEventArgs(graphicsService.GraphicsDevice));
 
+            // If lost control of graphics device, skip rendering
+            if (graphicsService.GraphicsDevice.GraphicsDeviceStatus == GraphicsDeviceStatus.Lost)
+                return;
+
+            // Reset the device if needed
+            if (graphicsService.GraphicsDevice.GraphicsDeviceStatus == GraphicsDeviceStatus.NotReset)
+                graphicsService.ResetDevice(width, height);
+
             // Present to the screen, but only use the visible area of the back buffer
-            graphicsService.GraphicsDevice.Present(viewport.Bounds, null, hWnd);
+            if (graphicsService.GraphicsDevice.GraphicsDeviceStatus == GraphicsDeviceStatus.Normal)
+                graphicsService.GraphicsDevice.Present(viewport.Bounds, null, hWnd);
         }
 
         void XnaWindowHost_Loaded(object sender, RoutedEventArgs e)
