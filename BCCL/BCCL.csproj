@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\Events\WeakEventHandler.cs" />
+    <Compile Include="MvvmLight\Threading\TaskFactoryHelper.cs" />
     <Compile Include="WriteableBitmapWpf\NativeMethods.cs" />
     <Compile Include="WriteableBitmapWpf\WriteableBitmapBaseExtensions.cs" />
     <Compile Include="WriteableBitmapWpf\WriteableBitmapFillExtensions.cs" />
@@ -199,7 +200,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_StartDate="2001/1/1" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" />
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_StartDate="2001/1/1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

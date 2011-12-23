@@ -1,0 +1,37 @@
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace BCCL.MvvmLight.Threading
+{
+    public static class TaskFactoryHelper
+    {
+        public static TaskFactory UiTaskFactory
+        {
+            get;
+            private set;
+        }
+
+        public static TaskScheduler UiTaskScheduler
+        {
+            get;
+            private set;
+        }
+
+        public static void ExecuteUiTask(Action action)
+        {
+            UiTaskFactory.StartNew(action);
+        }
+
+        public static void Initialize()
+        {
+            if (UiTaskFactory != null)
+            {
+                return;
+            }
+
+            UiTaskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
+            UiTaskFactory = new TaskFactory(UiTaskScheduler);
+        }
+    }
+}
