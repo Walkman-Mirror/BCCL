@@ -57,4 +57,4 @@ using System.Windows.Markup;
 
 [assembly: XmlnsDefinitionAttribute("http://bccl/wpf", "BCCL.UI.Xaml")]
 [assembly: XmlnsDefinitionAttribute("http://bccl/wpf", "BCCL.UI.Xaml.Enum")]
-[assembly: XmlnsPrefix("http://schemas.bccl.local/operations", "bccl")]
+[assembly: XmlnsPrefix("http://bccl/wpf", "bccl")]
