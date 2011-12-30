@@ -11,6 +11,12 @@ namespace BCCL.Geometry
 {
     public static class Fill
     {
+        public static IEnumerable<Vector2Int32> FillRectangleCentered(Vector2Int32 center, Vector2Int32 size)
+        {
+            var offset = new Vector2Int32(center.X - size.X/2, center.Y - size.Y/2);
+            return FillRectangle(offset, size);
+        }
+
         public static IEnumerable<Vector2Int32> FillRectangle(Vector2Int32 offset, Vector2Int32 size)
         {
             for (int y = offset.Y; y < offset.Y + size.Y; y++)
