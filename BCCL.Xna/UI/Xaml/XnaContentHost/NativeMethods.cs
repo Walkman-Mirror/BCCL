@@ -45,7 +45,22 @@ namespace BCCL.UI.Xaml.XnaContentHost
         public const int MK_XBUTTON2 = 0x040;
 
         // Define the cursor icons we use
-        public const int IDC_ARROW = 32512;
+        public const int  IDC_ARROW			= 32512;
+        public const int  IDC_IBEAM			= 32513;
+        public const int  IDC_WAIT			= 32514;
+        public const int  IDC_CROSS 		= 32515; 
+        public const int  IDC_UPARROW 		= 32516;
+        public const int  IDC_SIZENWSE 		= 32642;
+        public const int  IDC_SIZENESW 		= 32643;
+        public const int  IDC_SIZEWE 		= 32644; 
+        public const int  IDC_SIZENS 		= 32645; 
+        public const int  IDC_SIZEALL 		= 32646; 
+        public const int  IDC_NO 			= 32648; 
+        public const int  IDC_HAND 			= 32649;
+        public const int  IDC_APPSTARTING 	= 32650;
+        public const int  IDC_HELP 			= 32651;
+        public const int  IDC_ICON 			= 32641;
+        public const int  IDC_SIZE          = 32640;
 
         // Define the TME_LEAVE value so we can register for WM_MOUSELEAVE messages
         public const uint TME_LEAVE = 0x00000002;
@@ -120,6 +135,18 @@ namespace BCCL.UI.Xaml.XnaContentHost
 
         [DllImport("user32.dll")]
         public static extern IntPtr LoadCursor(IntPtr hInstance, int lpCursorName);
+
+        [DllImport("user32.dll")]
+        public static extern bool DestroyCursor(IntPtr hCursor);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr LoadCursorFromFile(string lpFileName);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SetCursor(IntPtr hCursor);
+
+        [DllImport("user32.dll")]
+        public static extern bool SetSystemCursor(IntPtr hcur, uint id);
 
         [DllImport("user32.dll")]
         public static extern int TrackMouseEvent(ref TRACKMOUSEEVENT lpEventTrack);
