@@ -53,7 +53,7 @@ using System.Windows.Markup;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.12001.2308")]
+[assembly: AssemblyFileVersion("1.0.12003.2319")]
 
 [assembly: XmlnsDefinitionAttribute("http://bccl/wpf", "BCCL.UI.Xaml")]
 [assembly: XmlnsDefinitionAttribute("http://bccl/wpf", "BCCL.UI.Xaml.Enum")]

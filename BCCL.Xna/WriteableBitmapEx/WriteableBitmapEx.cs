@@ -36,19 +36,23 @@ namespace System.Windows.Media.Imaging
             return bmp;
         }
 
-        public static Texture2D ToTexture2D(this WriteableBitmap bitmap, GraphicsDevice gd)
+        public static Texture2D ToTexture2D(this WriteableBitmap bmp, GraphicsDevice gd)
         {
             // Initialize buffers
-            var result = new Texture2D(gd, bitmap.PixelWidth, bitmap.PixelHeight);
-            var pixelData = new int[bitmap.PixelWidth * bitmap.PixelHeight];
+            var result = new Texture2D(gd, bmp.PixelWidth, bmp.PixelHeight);
+            var pixelData = new int[bmp.PixelWidth * bmp.PixelHeight];
 
-            // Copy Data
-            Marshal.Copy(bitmap.BackBuffer, pixelData, 0, pixelData.Length);
-
-            for (int i = 0; i < pixelData.Length; i++)
+            bmp.Lock();
+            unsafe
             {
-                pixelData[i] = ColorToXna(pixelData[i]);
+                var pixels = (int*)bmp.BackBuffer;
+                for (int i = 0; i < pixelData.Length; i++)
+                {
+                    pixelData[i] = ColorToXna(pixels[i]);
+                }
             }
+            bmp.Unlock();
+
             result.SetData(pixelData);
 
             // Return texture

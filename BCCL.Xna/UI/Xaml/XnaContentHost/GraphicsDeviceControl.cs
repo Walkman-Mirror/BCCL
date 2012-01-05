@@ -343,7 +343,6 @@ namespace BCCL.UI.Xaml.XnaContentHost
             if (graphicsService == null)
             {
                 graphicsService = GraphicsDeviceService.AddRef(hWnd, (int)ActualWidth, (int)ActualHeight);
-
                 // Invoke the LoadContent event
                 if (LoadContent != null)
                     LoadContent(this, new GraphicsDeviceEventArgs(graphicsService.GraphicsDevice));
