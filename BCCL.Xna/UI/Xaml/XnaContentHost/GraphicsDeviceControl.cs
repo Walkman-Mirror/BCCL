@@ -330,7 +330,10 @@ namespace BCCL.UI.Xaml.XnaContentHost
 
             // Reset the device if needed
             if (graphicsService.GraphicsDevice.GraphicsDeviceStatus == GraphicsDeviceStatus.NotReset)
+            {
                 graphicsService.ResetDevice(width, height);
+                return;
+            }
 
             // Present to the screen, but only use the visible area of the back buffer
             if (graphicsService.GraphicsDevice.GraphicsDeviceStatus == GraphicsDeviceStatus.Normal)
