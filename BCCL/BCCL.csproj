@@ -52,6 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite">
@@ -74,7 +75,75 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\Events\WeakEventHandler.cs" />
-    <Compile Include="MvvmLight\Threading\TaskFactoryHelper.cs" />
+    <Compile Include="MvvmLight\Command\EventToCommand.cs" />
+    <Compile Include="MvvmLight\Command\EventToCommand.WPF.cs" />
+    <Compile Include="MvvmLight\Command\EventToCommandVS10.cs" />
+    <Compile Include="MvvmLight\Command\RelayCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Command\RelayCommandGeneric.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Helpers\IExecuteWithObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Helpers\WeakAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Helpers\WeakActionGeneric.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\ICleanup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\DialogMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\GenericMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\IMessenger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\MessageBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\Messenger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\NotificationMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\NotificationMessageAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\NotificationMessageActionGeneric.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\NotificationMessageGeneric.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\NotificationMessageWithCallback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\PropertyChangedMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Messaging\PropertyChangedMessageBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\ObservableObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Threading\DispatcherHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\Threading\TaskFactoryHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MvvmLight\ViewModelBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="UI\Xaml\DropDownButton.cs" />
     <Compile Include="WriteableBitmapWpf\MoreExtensions.cs" />
     <Compile Include="WriteableBitmapWpf\NativeMethods.cs" />
@@ -118,8 +187,8 @@
     <Compile Include="IssueTracking\Redmine\Types\Version.cs" />
     <Compile Include="Sql\ISqlService.cs" />
     <Compile Include="Sql\MsSqlService.cs" />
-    <None Include="Sql\OracleService.cs" />
-    <None Include="Sql\SqlLiteService.cs" />
+    <Compile Include="Sql\OracleService.cs" />
+    <Compile Include="Sql\SqlLiteService.cs" />
     <Compile Include="Sql\SqlServiceBase.cs" />
     <Compile Include="Sql\TnsNamesParser.cs" />
     <Compile Include="UI\WinForms\SearchTextBox.cs">
@@ -160,27 +229,6 @@
     <Compile Include="Logging\MessageLevel.cs" />
     <Compile Include="Logging\RedmineLogger.cs" />
     <Compile Include="Logging\TextLogger.cs" />
-    <Compile Include="MvvmLight\Command\RelayCommand.cs" />
-    <Compile Include="MvvmLight\Command\RelayCommandGeneric.cs" />
-    <Compile Include="MvvmLight\Helpers\IExecuteWithObject.cs" />
-    <Compile Include="MvvmLight\Helpers\WeakAction.cs" />
-    <Compile Include="MvvmLight\Helpers\WeakActionGeneric.cs" />
-    <Compile Include="MvvmLight\ICleanup.cs" />
-    <Compile Include="MvvmLight\Messaging\DialogMessage.cs" />
-    <Compile Include="MvvmLight\Messaging\GenericMessage.cs" />
-    <Compile Include="MvvmLight\Messaging\IMessenger.cs" />
-    <Compile Include="MvvmLight\Messaging\MessageBase.cs" />
-    <Compile Include="MvvmLight\Messaging\Messenger.cs" />
-    <Compile Include="MvvmLight\Messaging\NotificationMessage.cs" />
-    <Compile Include="MvvmLight\Messaging\NotificationMessageAction.cs" />
-    <Compile Include="MvvmLight\Messaging\NotificationMessageActionGeneric.cs" />
-    <Compile Include="MvvmLight\Messaging\NotificationMessageGeneric.cs" />
-    <Compile Include="MvvmLight\Messaging\NotificationMessageWithCallback.cs" />
-    <Compile Include="MvvmLight\Messaging\PropertyChangedMessage.cs" />
-    <Compile Include="MvvmLight\Messaging\PropertyChangedMessageBase.cs" />
-    <Compile Include="MvvmLight\ObservableObject.cs" />
-    <Compile Include="MvvmLight\Threading\DispatcherHelper.cs" />
-    <Compile Include="MvvmLight\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -20,14 +20,13 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using BCCL.MvvmLight.Messaging;
 using System.Linq.Expressions;
 
 #if WIN8
 using PropertyChangedEventArgs = Windows.UI.Xaml.Data.PropertyChangedEventArgs;
 #else
 using System.Windows;
-using BCCL.MvvmLight.Messaging;
-
 #endif
 
 ////using GalaSoft.Utilities.Attributes;
