@@ -75,9 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\Events\WeakEventHandler.cs" />
-    <Compile Include="MvvmLight\Command\EventToCommand.cs" />
-    <Compile Include="MvvmLight\Command\EventToCommand.WPF.cs" />
-    <Compile Include="MvvmLight\Command\EventToCommandVS10.cs" />
     <Compile Include="MvvmLight\Command\RelayCommand.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -145,6 +142,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UI\Xaml\DropDownButton.cs" />
+    <Compile Include="UI\Xaml\ListBoxExtenders.cs" />
     <Compile Include="WriteableBitmapWpf\MoreExtensions.cs" />
     <Compile Include="WriteableBitmapWpf\NativeMethods.cs" />
     <Compile Include="WriteableBitmapWpf\WriteableBitmapBaseExtensions.cs" />
@@ -185,12 +183,6 @@
     <Compile Include="IssueTracking\Redmine\Types\Tracker.cs" />
     <Compile Include="IssueTracking\Redmine\Types\User.cs" />
     <Compile Include="IssueTracking\Redmine\Types\Version.cs" />
-    <Compile Include="Sql\ISqlService.cs" />
-    <Compile Include="Sql\MsSqlService.cs" />
-    <Compile Include="Sql\OracleService.cs" />
-    <Compile Include="Sql\SqlLiteService.cs" />
-    <Compile Include="Sql\SqlServiceBase.cs" />
-    <Compile Include="Sql\TnsNamesParser.cs" />
     <Compile Include="UI\WinForms\SearchTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
