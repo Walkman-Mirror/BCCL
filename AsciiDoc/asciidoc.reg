@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.asciidoc\shell\Convert To PDF]
+@="Convert To PD&F"
+
+[HKEY_CLASSES_ROOT\.asciidoc\shell\Convert To PDF\command]
+@="D:\\DEV\\DOCS\\TEX\\a2x.bat \"%1\""
