@@ -142,6 +142,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UI\Xaml\DropDownButton.cs" />
+    <Compile Include="UI\Xaml\IntegerRangeValidationRule.cs" />
     <Compile Include="UI\Xaml\ListBoxExtenders.cs" />
     <Compile Include="WriteableBitmapWpf\MoreExtensions.cs" />
     <Compile Include="WriteableBitmapWpf\NativeMethods.cs" />
@@ -279,7 +280,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_StartDate="2001/1/1" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" />
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_StartDate="2001/1/1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
