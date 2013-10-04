@@ -18,9 +18,9 @@ namespace BCCL.MvvmLight.Threading
             private set;
         }
 
-        public static void ExecuteUiTask(Action action)
+        public static Task ExecuteUiTask(Action action)
         {
-            UiTaskFactory.StartNew(action);
+            return UiTaskFactory.StartNew(action);
         }
 
         public static void Initialize()
