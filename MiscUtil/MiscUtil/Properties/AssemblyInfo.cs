@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -40,4 +40,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 [assembly: AssemblyVersion("1.0.0.0")]
 // This is filled in automatically with the revision number from buildkit.build
-[assembly: AssemblyFileVersion("1.0.0.285")]
+[assembly: AssemblyFileVersion("1.0.13282.2214")]
