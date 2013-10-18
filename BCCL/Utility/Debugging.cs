@@ -14,12 +14,13 @@ namespace BCCL.Utility
 {
     public static class Debugging
     {
-        public static bool IsInDesignMode
+        private static string procName;
+        public static bool IsInDesignMode;
+
+        static Debugging()
         {
-            get
-            {
-                return (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv");
-            }
+            procName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+            IsInDesignMode = procName.Contains("devenv");
         }
     }
 }
